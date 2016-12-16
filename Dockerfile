@@ -2,13 +2,13 @@ FROM debian:stable
 
 MAINTAINER Rick Moran <drhayt@gmail.com>
 
-ENV MONEROD_VERSION="v0.10.0"
+ENV MONEROD_VERSION="v0.10.1"
 RUN groupadd -r monero && useradd -r -m -g monero monero
 RUN apt-get update -q && \
     apt-get install -q -y --no-install-recommends ca-certificates wget bzip2 && \
     mkdir /monero && \
     cd /monero && \
-    wget -q -O monero.tar.bz2 https://github.com/monero-project/monero/releases/download/${MONEROD_VERSION}/monero.linux.x64.v0-10-0-0.tar.bz2 && \
+    wget -q -O monero.tar.bz2 https://github.com/monero-project/monero/releases/download/${MONEROD_VERSION}/monero.linux.x64.v0-10-1-0.tar.bz2 && \
     tar -xvjf monero.tar.bz2 && \
     rm monero.tar.bz2
 
