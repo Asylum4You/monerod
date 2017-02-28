@@ -7,10 +7,10 @@ RUN apt-get update -q && \
     apt-get install -q -y --no-install-recommends ca-certificates wget bzip2 && \
     mkdir /monero && \
     cd /monero && \
-    wget -q -O monero.tar.bz2 https://downloads.getmonero.org/cli/monero-linux-x64-v0.10.2.0.tar.bz2 && \
+    wget -q -O monero.tar.bz2 https://downloads.getmonero.org/cli/monero-linux-x64-v0.10.2.1.tar.bz2 && \
     tar -xvjf monero.tar.bz2 && \
     rm monero.tar.bz2 && \
-    mv monero-v0.10.2/* .
+    mv monero-v0.10.2.1/* .
 
 WORKDIR /monero
 USER monero
